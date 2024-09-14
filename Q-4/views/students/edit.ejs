@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= student._id ? 'Edit Student' : 'Add Student' %></title>
+</head>
+<body>
+  <h1><%= student._id ? 'Edit Student' : 'Add Student' %></h1>
+  <form action="<%= student._id ? '/students/edit/' + student._id : '/students/add' %>" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= student.name %>" required><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" name="age" id="age" value="<%= student.age %>" required><br><br>
+
+    <label for="grade">Grade:</label>
+    <input type="text" name="grade" id="grade" value="<%= student.grade %>" required><br><br>
+
+    <input type="submit" value="<%= student._id ? 'Update Student' : 'Add Student' %>">
+  </form>
+  <a href="/students">Back to List</a>
+</body>
+</html>
