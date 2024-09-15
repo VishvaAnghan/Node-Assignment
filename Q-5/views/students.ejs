@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Students</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Manage Students</h1>
+    <form id="student-form">
+        <input type="text" id="student-name" placeholder="Name" required>
+        <input type="number" id="student-age" placeholder="Age" required>
+        <input type="text" id="student-course" placeholder="Course" required>
+        <button type="submit">Add Student</button>
+    </form>
+    <ul id="students-list"></ul>
+    <input type="text" id="token-input" readonly placeholder="Token will appear here">
+    <button id="copy-token-button">Copy Token</button>
+    <button id="logout-button">Logout</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

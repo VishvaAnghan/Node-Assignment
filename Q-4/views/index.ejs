@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+    <title>Students</title>
 </head>
 <body>
-  <h1>Welcome to Student Management System</h1>
-  <a href="/students">View Students</a>
-  <a href="/logout">Logout</a>
+    <h1>Students List</h1>
+    <a href="/students/new">Add New Student</a>
+    <ul>
+        <% students.forEach(student => { %>
+            <li>
+                <%= student.name %> (<%= student.age %> years old) - <%= student.course %>
+                <a href="/students/edit/<%= student._id %>">Edit</a>
+                <form action="/students/delete/<%= student._id %>" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+        <hr/>
+                <a href="/login">logout</a>
+    </ul>
 </body>
 </html>
